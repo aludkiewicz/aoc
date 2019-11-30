@@ -12,7 +12,7 @@ import java.util.List;
 public class FileReader {
 
     public List<String> read(String filename) {
-        URL resource = Thread.currentThread().getContextClassLoader().getResource("resources/hello.txt");
+        URL resource = Thread.currentThread().getContextClassLoader().getResource("resources/" + filename);
 
         try {
             return Files.readAllLines(Paths.get(resource.toURI()));
