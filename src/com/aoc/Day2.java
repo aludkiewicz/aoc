@@ -16,8 +16,6 @@ public class Day2 {
 
         inputList = Arrays.asList(day2Input.get(0).split(","));
 
-        List<Integer> ints = getOriginalInput();
-
         part1();
         part2();
 
@@ -48,7 +46,7 @@ public class Day2 {
         ints.set(2, 2);
 
         runProgram(ints);
-        System.out.println(ints.get(0));
+        System.out.println("Solution part 1 : " + ints.get(0));
     }
 
 
