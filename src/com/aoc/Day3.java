@@ -31,7 +31,6 @@ public class Day3 {
             }
         }
 
-        System.out.println("Part 1 answer: " + distance);
 
         int stepSum = Integer.MAX_VALUE;
         for (Coordinate coordinate : wireOneCoordinates) {
@@ -44,6 +43,7 @@ public class Day3 {
             }
         }
 
+        System.out.println("Part 1 answer: " + distance);
         System.out.println("Part 2 answer: " + stepSum);
 
     }
@@ -63,7 +63,7 @@ public class Day3 {
                         y++;
                         numberOfStepsTaken++;
                         Coordinate coord = new Coordinate(x, y, numberOfStepsTaken);
-                        if(!wireCoordinates.contains(coord)) {
+                        if(!wireCoordinates.contains(coord)) { // A little hackish but equality is by x,y alone... Not including number of steps taken
                             wireCoordinates.add(coord);
                         }
                     }
