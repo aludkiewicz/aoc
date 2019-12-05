@@ -28,21 +28,7 @@ public class Day5 {
 
     }
 
-
-
-    private static List<Integer> getOriginalInput() {
-        return inputList
-                .stream()
-                .mapToInt(Integer::parseInt)
-                .boxed()
-                .collect(Collectors.toList());
-    }
-
-
     private static void runProgram(List<String> input) {
-
-
-
         int n = 0;
         while (n < input.size()) {
 
@@ -60,6 +46,7 @@ public class Day5 {
                 int pos = Integer.parseInt(input.get(n++));
 
                 input.set(pos, String.valueOf(val1 + val2));
+
             } else if (opCode == 2) {
 
                 int val1 = getValue(modeParam1, n++, input);
@@ -68,25 +55,32 @@ public class Day5 {
 
                 input.set(pos, String.valueOf(val1 * val2));
             } else if (opCode == 3) {
+
                 int pos = Integer.parseInt(input.get(n++));
                 int val = inputId; // Not a parameter - Is input
                 input.set(pos, String.valueOf(val));
+
             } else if (opCode == 4) {
+
                 int val1 = getValue(modeParam1, n++, input);
                 System.out.println(val1);
 
             } else if (opCode == 5) {
+
                 int val1 = getValue(modeParam1, n++, input);
                 int val2 = getValue(modeParam2, n++, input);
 
                 n = val1 != 0 ? val2 : n;
 
             } else if (opCode == 6) {
+
                 int val1 = getValue(modeParam1, n++, input);
                 int val2 = getValue(modeParam2, n++, input);
 
                 n = val1 == 0 ? val2 : n;
+
             } else if (opCode == 7) {
+
                 int val1 = getValue(modeParam1, n++, input);
                 int val2 = getValue(modeParam2, n++, input);
                 int pos = Integer.parseInt(input.get(n++));
@@ -98,6 +92,7 @@ public class Day5 {
                 }
 
             } else if (opCode == 8) {
+
                 int val1 = getValue(modeParam1, n++, input);
                 int val2 = getValue(modeParam2, n++, input);
                 int pos = Integer.parseInt(input.get(n++));
@@ -107,9 +102,7 @@ public class Day5 {
                 } else {
                     input.set(pos, String.valueOf(0));
                 }
-            }
-
-            else if (opCode == 99) {
+            } else if (opCode == 99) {
                 break;
             }
         }
