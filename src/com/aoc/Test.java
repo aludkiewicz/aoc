@@ -5,13 +5,13 @@ import java.text.DecimalFormat;
 
 public class Test {
 
-    private static Day10.Coordinate axis = new Day10.Coordinate(0,1);
-    private static Day10.Coordinate station = new Day10.Coordinate(11,13);
+    private static Coordinate axis = new Coordinate(0,1);
+    private static Coordinate station = new Coordinate(11,13);
 
     public static void main(String[] args) {
-        Day10.Coordinate a = new Day10.Coordinate(11,12);
-        Day10.Coordinate b = new Day10.Coordinate(12,1);
-        Day10.Coordinate c = new Day10.Coordinate(13,2);
+        Coordinate a = new Coordinate(11,12);
+        Coordinate b = new Coordinate(12,1);
+        Coordinate c = new Coordinate(13,2);
 
 
         System.out.println(calcRotationAngleInDegrees(station,a));
@@ -21,7 +21,7 @@ public class Test {
 
     }
 
-    public static String calcRotationAngleInDegrees(Day10.Coordinate centerPt, Day10.Coordinate targetPt) {
+    public static String calcRotationAngleInDegrees(Coordinate centerPt, Coordinate targetPt) {
         double theta = Math.atan2(targetPt.y - centerPt.y, targetPt.x - centerPt.x);
 
         theta += Math.PI/2.0;

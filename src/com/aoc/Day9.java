@@ -91,7 +91,7 @@ public class Day9 {
                     pos += relBase;
                 }
 
-                BigInteger val = Day9.arguments.get(arg++); // Not a parameter - Is input
+                BigInteger val = arguments.get(arg++); // Not a parameter - Is input
                 input.set(pos, String.valueOf(val));
 
             } else if (opCode == 4) {
