@@ -26,7 +26,7 @@ public class Day12 {
         part1();
 
         prepPart2(day12Input);
-        
+
         part2();
 
     }
@@ -40,11 +40,9 @@ public class Day12 {
         boolean yRecurred = false;
         boolean zRecurred = false;
 
-        int i = 0;
         while(true) {
             applyGravity();
             applyVelocities();
-            i++;
             if(!xRecurred) {
                 xRecurrence++;
             }
